@@ -18,9 +18,13 @@ scala:
 jdk:
   - openjdk8
   - openjdk11
-
+  
+before_script:
+  - export FLAGS="--coverage "
+  - export CXXFLAGS="--coverage "
+  - export LDFLAGS="--coverage "
 script:
-  - sbt test
+  - ./sbt test
   - sbt clean coverage test coverageReport
 
 after_success:
