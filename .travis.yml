@@ -24,9 +24,7 @@ before_script:
   - export CXXFLAGS="--coverage "
   - export LDFLAGS="--coverage "
 script:
-  - make
-  - make test
-  - sbt clean coverage test coverageReport
+  - sbt coverage test coverageReport
 
 after_success:
   - codecov -t 9f8267a5-1057-4165-8176-a9320f2841f8
