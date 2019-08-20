@@ -8,6 +8,8 @@ services:
 
 before_install:
   - pip install --user codecov
+  - pip install --user coverage
+
 language: scala
 
 scala:
