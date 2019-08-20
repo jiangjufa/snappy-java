@@ -23,8 +23,8 @@ before_script:
   - export FLAGS="--coverage "
   - export CXXFLAGS="--coverage "
   - export LDFLAGS="--coverage "
-  - cd ~ ;cd jiangjufa/snappy-java;make;make test
 script:
+  - sbt jacoco:cover
   - sbt clean coverage test coverageReport
 
 after_success:
