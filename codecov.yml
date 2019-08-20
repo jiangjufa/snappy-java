@@ -15,4 +15,4 @@ coverage:
   precision: 5
   
 codecov:
-  branch: travisCiTest 
+  branch: travisciTest 
