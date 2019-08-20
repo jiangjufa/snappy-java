@@ -20,6 +20,7 @@ jdk:
   - openjdk11
 
 script:
+  - sbt test
   - sbt clean coverage test coverageReport
 
 after_success:
