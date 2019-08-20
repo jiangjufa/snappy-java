@@ -24,7 +24,8 @@ before_script:
   - export CXXFLAGS="--coverage "
   - export LDFLAGS="--coverage "
 script:
-  - ./sbt test
+  - make
+  - make test
   - sbt clean coverage test coverageReport
 
 after_success:
