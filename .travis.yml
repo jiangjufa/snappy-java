@@ -1,8 +1,13 @@
 sudo: required
+env:
+  global:
+     - CODECOV_TOKEN=:9f8267a5-1057-4165-8176-a9320f2841f8
 
 services:
   - docker
 
+before_install:
+  - pip install --user codecov
 language: scala
 
 scala:
@@ -14,3 +19,6 @@ jdk:
 
 script:
   - ./script/travis-deploy.sh
+
+after_success:
+  - codecov -t 9f8267a5-1057-4165-8176-a9320f2841f8
